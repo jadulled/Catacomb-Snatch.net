@@ -1,0 +1,94 @@
+// DEFAULT Styleheet
+// 'General' module
+// -------------------------------------------
+// for: CatacombSnatch.net
+// created: 2012-11-16
+
+/* Main element styling */
+
+	body {
+		color: @default;
+		background: @bg url('@{imgPath}background.png') top center no-repeat;
+		font: 13px "Trebuchet MS", Helvetica, Arial, sans-serif;
+		line-height: 18px;
+
+		padding-top: 10px;
+	}
+
+	.container {
+		max-width: 940px;
+
+		@media (max-width: 767px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	.wrapper {
+		margin-bottom: 20px;
+
+		.content {
+			background: @darkbrown url("@{imgPath}cnt-bg.png") top left repeat-y;
+			padding: 5px;
+		}
+
+	/* Footer styling */
+		.footer {
+			color: @darkgold;
+			background: url("@{imgPath}cnt-bgb.png") top center no-repeat;
+			
+			margin: 0 auto;
+			padding-top: 20px;
+			
+			font-size: 11px;
+			text-align: center;
+
+			.shadowed(0, -1px);
+
+			.footer-nav a {
+				color: @default;
+				font-size: 13px;
+
+				.nilland();
+			}
+		}
+	}
+
+
+	.t-center { text-align: center; }
+
+/* Links */
+
+	a {
+		color: @default;
+		text-decoration: none;
+	}
+
+	a:hover, a:focus, a:active {
+		color: @default;
+		text-decoration: underline;
+	}
+
+
+/* Header styling */
+
+	header {
+		.logo a,
+		.player-artwork {
+			display: block;
+			text-indent: -999999px;
+		}
+
+		.logo a {
+			margin: 10px 0 20px;
+			background: url('@{imgPath}logo.png') center center no-repeat;
+			width: 237px;
+			height: 97px;
+		}
+
+		.player-artwork {
+			background: url('@{imgPath}player-artwork.png') bottom center no-repeat;
+			width: 136px;
+			height: 137px;
+		}
+	}

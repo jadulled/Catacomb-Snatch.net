@@ -58,7 +58,7 @@ $template['active_template'] = 'default';
 
 $template['default']['template'] = 'template';
 $template['default']['regions'] = array(
-	'content', 'title'
+	'content', 'title', 'sidebar'
 );
 $template['default']['parser'] = 'parser';
 $template['default']['parser_method'] = 'parse';

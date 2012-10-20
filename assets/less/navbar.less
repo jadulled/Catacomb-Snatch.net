@@ -1,0 +1,43 @@
+// DEFAULT Styleheet
+// 'Navbar' module
+// -------------------------------------------
+// for: CatacombSnatch.net
+// created: 2012-11-19
+
+/* Main navigation styling */
+
+	ul.navbar-snatch {
+		display: block;
+		list-style: none;
+		margin: 0;
+
+		li {
+			float: left;
+			text-align: center;
+
+			.shadowed();
+
+			> a {
+				background: url("@{imgPath}navbar.png") top center no-repeat;
+
+				display: block;
+				width: 140px;
+				height: 28px;
+
+				padding-top: 8px;
+
+				.nilland();
+
+				&:hover {
+					color: @white;
+					text-decoration: none;
+				}
+			}
+
+			&.first > a { background-position: top left; }
+			&.first.active > a { background-position: bottom left; }
+
+			&.last > a { background-position: top right; }
+			&.last.active > a { background-position: bottom right }
+		}
+	}

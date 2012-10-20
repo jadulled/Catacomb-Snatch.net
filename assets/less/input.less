@@ -1,0 +1,36 @@
+// DEFAULT Styleheet
+// 'Input' module
+// -------------------------------------------
+// for: CatacombSnatch.net
+// created: 2012-11-16
+
+/* Text input */
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"],
+	.uneditable-input {
+		border: 2px solid @brown;
+		background: @darkbrown;
+		color: @white;
+		font-size: 11px;
+		padding: 2px 3px;
+
+		:focus {
+			box-shadow: none !important;
+			border-color: @default;
+		}
+	}
+
+	input.w100 { width: 95%; }
