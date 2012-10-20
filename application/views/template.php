@@ -1,14 +1,18 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
-<!DOCTYPE html>
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+
+$base_url = base_url('/');
+
+?><!DOCTYPE html>
 <html lang="en">
 	<head>
-   		<title><?= $title ?></title>
+   		<title><?= empty($title) ? '' : $title.' - ' ?>CatacombSnatch</title>
 
    		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/default.css" rel="stylesheet" type="text/css" />
+		<link href="<?= $base_url; ?>assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="<?= $base_url; ?>assets/css/default.css" rel="stylesheet" type="text/css" />
 	
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -25,7 +29,7 @@
 				<div class="span9">
 					<header class="row">
 						<!-- Logo -->
-						<div class="span5 logo"><a href="#">Catacomb-Snatch</a></div>
+						<div class="span5 logo"><?= anchor("/", 'Catacomb-Snatch') ?></div>
 
 						<!-- Artwork -->
 						<div class="span7 player-artwork visible-desktop">this is ART</div>
@@ -43,32 +47,8 @@
 					<div class="clearfix"></div>
 
 					<div class="wrapper">
-						<div class="content">
-							<?= $content ?>
-							<p><?= $this->agent->agent_string() ?></p>
-							<p>
-								Lorem ipsum<br />
-								dolor sit<br />
-								amet consectetur
-							</p>
-							<p>
-								Lorem ipsum<br />
-								dolor sit<br />
-								amet consectetur
-							</p>
-
-							<p>
-								Lorem ipsum<br />
-								dolor sit<br />
-								amet consectetur
-							</p>
-
-							<p>
-								Lorem ipsum<br />
-								dolor sit<br />
-								amet consectetur
-							</p>
-						</div>
+						<!-- Site content -->
+						<div class="content"><?= $content ?></div>
 
 						<!-- Footer -->
 						<footer class="footer">
@@ -110,7 +90,7 @@
 					</div>
 
 					<div class="social">
-						<a href="https://twitter.com/CSnatchNet"><img src="assets/img/twitter-logo.png" alt="Visit us on Twitter" /></a>
+						<a href="https://twitter.com/CSnatchNet"><img src="<?= $base_url; ?>assets/img/twitter-logo.png" alt="Visit us on Twitter" /></a>
 					</div>
 				</div>			
 			</div>

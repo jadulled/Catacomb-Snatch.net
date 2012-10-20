@@ -4,7 +4,7 @@
 // for: CatacombSnatch.net
 // created: 2012-11-16
 
-/* Main element styling */
+// Main element styling
 
 	body {
 		color: @default;
@@ -13,8 +13,18 @@
 		line-height: 18px;
 
 		padding-top: 10px;
+
+		.shadowed();
 	}
 
+	h1,h2,h3,h4 {
+		color: @lightgold;
+		font-weight: normal;
+
+		.nilland();
+	}
+
+// Main block styling
 	.container {
 		max-width: 940px;
 
@@ -30,6 +40,57 @@
 		.content {
 			background: @darkbrown url("@{imgPath}cnt-bg.png") top left repeat-y;
 			padding: 5px;
+
+			min-height: 320px;
+
+			> hr {
+				background: url("@{imgPath}cnt-hr.png") center center no-repeat;
+				border: none;
+
+				display: block;
+				height: 14px;
+				margin: 10px 0;
+			}
+
+			.entry {
+				.date-col {
+					width: 10%;
+				
+					.day {
+						color: @lightgold;
+						
+						font-size: 32px;
+						font-weight: bold;
+						.nilland();
+
+						text-align: center;
+						margin-top: 8px;
+					}
+
+					.month {
+						color: @gold;
+						font-size: 11px;
+
+						margin-top: 5px;
+
+						text-align: center;
+					}
+				}
+
+				.cnt-col { width: 87%; }
+				
+				h3 {
+					margin: 0;
+					line-height: 28px;
+				}
+
+				.info {
+					color: @gold;
+					font-size: 11px;
+
+					margin-bottom: 10px;
+				}
+			}
 		}
 
 	/* Footer styling */
@@ -65,8 +126,8 @@
 	}
 
 	a:hover, a:focus, a:active {
-		color: @default;
-		text-decoration: underline;
+		color: @lightgold;
+		text-decoration: none;
 	}
 
 
